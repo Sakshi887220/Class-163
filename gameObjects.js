@@ -28,11 +28,7 @@ AFRAME.registerComponent("wire-fence", {
       wireFence4.setAttribute("id", "wireFence4" + i);
 
       //set the position
-      wireFence1.setAttribute("position", { x: posX, y: 2.5, z: -35 });
-      wireFence2.setAttribute("position", { x: posX, y: 2.5, z: 85 });
-      wireFence3.setAttribute("position", { x: -30, y: 2.5, z: posZ });
-      wireFence4.setAttribute("position", { x: 50, y: 2.5, z: posZ });
-
+      
       //set the scale
       wireFence1.setAttribute("scale", scale);
       wireFence2.setAttribute("scale", scale);
@@ -41,8 +37,7 @@ AFRAME.registerComponent("wire-fence", {
 
       //set the model
       wireFence1.setAttribute(
-        "gltf-model",
-        "./models/barbed_wire_fence/scene.gltf"
+       
       );
 
       wireFence2.setAttribute(
@@ -51,8 +46,7 @@ AFRAME.registerComponent("wire-fence", {
       );
 
       wireFence3.setAttribute(
-        "gltf-model",
-        "./models/barbed_wire_fence/scene.gltf"
+        
       );
 
       wireFence4.setAttribute(
@@ -90,16 +84,7 @@ AFRAME.registerComponent("boxes", {
   },
   init: function () {
     for (var i = 0; i < 20; i++) {
-      var box = document.createElement("a-entity");
-      box.setAttribute("id", "box" + i); 
-
-      posX = Math.random()*200 -100;
-      posY = 1.5;
-      posZ =Math.random()*200 -100;
-
-      position = { x: posX, y: posY, z: posZ };           
-      box.setAttribute("position", position);
-
+      
       box.setAttribute("geometry", {
         primitive: "box",
         height: this.data.height,
